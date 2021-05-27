@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="codecompletion_category"
+         name="custom_code_completion"
+         point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
+      <proposalCategory></proposalCategory>
+   </extension>
+   <extension
+         id="codecompletion_endpoint"
+         point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
+      <javaCompletionProposalComputer
+            activate="true"
+            categoryId="eclipse-content-assist-extractor.codecompletion_category"
+            class="com.content_assist_extractor.CompletionProposalExtractor"
+            needsSortingAfterFiltering="false"
+            requiresUIThread="true">
+      </javaCompletionProposalComputer>
+   </extension>
+
+</plugin>
